@@ -4,7 +4,6 @@ use Auth;
 use Cms\Classes\ComponentBase;
 use Nielsvandendries\Message\Models\Messagelist;
 use Illuminate\Support\Facades\Session;
-use Carbon\Carbon;
 
 class Messages extends ComponentBase
 {
@@ -34,29 +33,7 @@ class Messages extends ComponentBase
         $messages = Messagelist::where('sender_id', $userId)->orderBy('created_at', 'desc')->get();
         $latestMessage = $messages->first();
 
-        if ($latestMessage && $latestMessage->created_at > session('last_message_check')) {
-            session()->flash('success', 'U heeft een nieuw bericht ontvangen!');
-        }
-
         session(['last_message_check' => now()]);
         $this->item = $messages->toArray();
     }
-
-    public function onMarkAsRead()
-{
-    $message_id = post('message_id');
-    $result = $this->messagelist->markAsRead($message_id);
-
-    if ($result) {
-        Flash::success('Bericht gemarkeerd als gelezen.');
-    } else {
-        Flash::error('Kon bericht niet markeren als gelezen.');
-    }
-
-    return [
-        '#messages' => $this->renderMessages(),
-    ];
-}
-
-
 }
