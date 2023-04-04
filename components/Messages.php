@@ -42,8 +42,21 @@ class Messages extends ComponentBase
         $this->item = $messages->toArray();
     }
 
-    public function setIsReadAttribute($value)
-    {
-        $this->attributes['is_read'] = $value;
+    public function onMarkAsRead()
+{
+    $message_id = post('message_id');
+    $result = $this->messagelist->markAsRead($message_id);
+
+    if ($result) {
+        Flash::success('Bericht gemarkeerd als gelezen.');
+    } else {
+        Flash::error('Kon bericht niet markeren als gelezen.');
     }
+
+    return [
+        '#messages' => $this->renderMessages(),
+    ];
+}
+
+
 }

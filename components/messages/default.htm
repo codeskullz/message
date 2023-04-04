@@ -1,4 +1,5 @@
 <!-- This Plugin is created for OctoberCMS v3 by NvandenDries.nl -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 {% set Messages = __SELF__.item %}
 {% for item in Messages %}
@@ -10,11 +11,26 @@
     <p class="card-text"><strong>Bericht:</strong><br>{{ item.message }}</p>
   </div>
   <div class="card-footer">
-    <label>
+    <button class="btn btn-default btn-sm" onclick="markAsRead({{ id }})">
       Markeren als gelezen
-      <input type="checkbox" v-model="item.is_read">
-    </label>
+    </button>
   </div>
 </div>
 
 {% endfor %}
+<p>* = Werkt nog niet</p>
+
+<script>
+  function markAsRead(message_id) {
+    $.request('onMarkAsRead', {
+        data: {
+            message_id: message_id,
+        },
+        update: {'#messages': '#messages'},
+        complete: function() {
+            // optioneel: voeg extra acties toe nadat het bericht als gelezen is gemarkeerd
+        },
+    });
+}
+
+</script>

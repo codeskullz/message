@@ -31,14 +31,26 @@ class Messagelist extends Model
     }
 
     public function createMessage($data)
-{
-    $user = Auth::getUser();
+    {
+        $user = Auth::getUser();
 
-    $message = new Messagelist;
-    $message->subject = $data['subject'];
-    $message->body = $data['body'];
-    $message->sender_id = $user->id;
-    $message->recipient_id = $data['recipient_id'];
-    $message->save();
-}
+        $message = new Messagelist;
+        $message->subject = $data['subject'];
+        $message->body = $data['body'];
+        $message->sender_id = $user->id;
+        $message->recipient_id = $data['recipient_id'];
+        $message->save();
+    }
+
+    public function markAsRead($message_id)
+    {
+        $message = Message::find($message_id);
+        if ($message) {
+            $message->is_read = '1'; // markeer als gelezen
+            $message->save(); // voer de database-update uit
+            return true;
+        }
+        return false;
+    }
+
 }
