@@ -4,11 +4,11 @@ use Cms\Classes\ComponentBase;
 use Nielsvandendries\Message\Models\Notifications;
 
 /**
- * Notifications Component
+ * Alerts Component
  *
  * @link https://docs.octobercms.com/3.x/extend/cms-components.html
  */
-class Alert extends ComponentBase
+class Alerts extends ComponentBase
 {
     public $item;
     public function componentDetails()

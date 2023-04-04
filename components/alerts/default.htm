@@ -1,5 +1,5 @@
-{% set Shownotifications = __SELF__.item %}
-{% for item in Shownotifications %}
+{% set Alerts = __SELF__.item %}
+{% for item in Alerts %}
 
 <div class="alert {{ item.type }}" role="alert">
     {{ item.message }}

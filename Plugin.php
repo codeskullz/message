@@ -8,7 +8,7 @@ class Plugin extends PluginBase
     {
         return [
             'Nielsvandendries\Message\Components\Messages' => 'Messages',
-            'Nielsvandendries\Message\Components\Notifications' => 'Notifications'
+            'Nielsvandendries\Message\Components\Alerts' => 'Alerts'
         ];
     }
 
