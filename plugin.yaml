@@ -10,8 +10,21 @@ permissions:
         label: Manager
 navigation:
     main-menu-item:
-        label: Messages
-        url: nielsvandendries/message/messagelist
+        label: 'Message System'
+        url: /
         icon: icon-envelope
         permissions:
             - manager
+        sideMenu:
+            side-menu-item:
+                label: Messages
+                url: nielsvandendries/message/messagelist
+                icon: icon-list-alt
+                permissions:
+                    - manager
+            side-menu-item2:
+                label: Notifications
+                url: nielsvandendries/message/notifications
+                icon: icon-lightbulb-o
+                permissions:
+                    - manager

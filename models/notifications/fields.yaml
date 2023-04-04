@@ -1,0 +1,20 @@
+fields:
+    type:
+        label: Type
+        showSearch: true
+        span: full
+        options:
+            alert-primary: Primary
+            alert-secondary: Secondary
+            alert-success: Succes
+            alert-danger: Danger
+            alert-warning: Warning
+            alert-info: Info
+            alert-light: Light
+            alert-dark: Dark
+        type: dropdown
+    message:
+        label: Message
+        size: small
+        span: full
+        type: textarea

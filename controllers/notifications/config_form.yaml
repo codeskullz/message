@@ -1,0 +1,11 @@
+name: Notifications
+modelClass: NielsVanDenDries\Message\Models\Notifications
+form: $/nielsvandendries/message/models/notifications/fields.yaml
+defaultRedirect: nielsvandendries/message/notifications
+create:
+    redirect: 'nielsvandendries/message/notifications/update/:id'
+    redirectClose: nielsvandendries/message/notifications
+update:
+    redirect: nielsvandendries/message/notifications
+    redirectClose: nielsvandendries/message/notifications
+preview: {  }

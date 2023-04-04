@@ -6,3 +6,6 @@
 1.0.3:
     - 'Updated table users'
     - builder_table_update_nielsvandendries_message_list.php
+1.0.4:
+    - 'Created table nielsvandendries_message_notitications'
+    - builder_table_create_nielsvandendries_message_notitications.php

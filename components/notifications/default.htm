@@ -1,0 +1,8 @@
+{% set Shownotifications = __SELF__.item %}
+{% for item in Shownotifications %}
+
+<div class="alert {{ item.type }}" role="alert">
+    {{ item.message }}
+</div>
+
+{% endfor %}
