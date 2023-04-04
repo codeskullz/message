@@ -12,9 +12,11 @@ fields:
             alert-info: Info
             alert-light: Light
             alert-dark: Dark
+        required: 1
         type: dropdown
     message:
         label: Message
         size: small
         span: full
-        type: textarea
+        required: 1
+        type: richeditor
