@@ -41,4 +41,9 @@ class Messages extends ComponentBase
         session(['last_message_check' => now()]);
         $this->item = $messages->toArray();
     }
+
+    public function setIsReadAttribute($value)
+    {
+        $this->attributes['is_read'] = $value;
+    }
 }

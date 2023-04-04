@@ -14,14 +14,9 @@ class Messagelist extends Model
         // ...
         'is_read',
     ];
-    /**
-     * @var string The database table used by the model.
-     */
+
     public $table = 'nielsvandendries_message_list';
 
-    /**
-     * @var array Validation rules
-     */
     public $rules = [
     ];
 
