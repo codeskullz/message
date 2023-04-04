@@ -1,8 +1,11 @@
 {% set Alerts = __SELF__.item %}
 {% for item in Alerts %}
 
-<div class="alert {{ item.type }}" role="alert">
-    {{ item.message }}
+<div class="container m-2">
+    <div class="alert {{ item.type }} alert-dismissible fade show" role="alert">
+        {{ item.message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 </div>
 
 {% endfor %}

@@ -9,3 +9,9 @@
 1.0.4:
     - 'Created table nielsvandendries_message_notitications'
     - builder_table_create_nielsvandendries_message_notitications.php
+1.0.5:
+    - 'Updated table nielsvandendries_message_notitications'
+    - builder_table_update_nielsvandendries_message_notitications.php
+1.0.6:
+    - 'Updated table nielsvandendries_message_notitications'
+    - builder_table_update_nielsvandendries_message_notitications_2.php
