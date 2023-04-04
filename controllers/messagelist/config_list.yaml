@@ -1,0 +1,10 @@
+title: Messagelist
+modelClass: NielsVanDenDries\Message\Models\Messagelist
+list: $/nielsvandendries/message/models/messagelist/columns.yaml
+recordUrl: 'nielsvandendries/message/messagelist/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

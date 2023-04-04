@@ -1,0 +1,20 @@
+<!-- This Plugin is created for OctoberCMS v3 by NvandenDries.nl -->
+
+{% set Messages = __SELF__.item %}
+{% for item in Messages %}
+
+<div class="card mt-2">
+  <div class="card-header">{{ item.subject }}</div>  
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{ item.created_at }}</h6>
+    <p class="card-text"><strong>Bericht:</strong><br>{{ item.message }}</p>
+  </div>
+  <div class="card-footer">
+    <label>
+      Markeren als gelezen
+      <input type="checkbox" v-model="item.is_read">
+    </label>
+  </div>
+</div>
+
+{% endfor %}

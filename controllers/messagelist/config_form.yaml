@@ -1,0 +1,11 @@
+name: Messagelist
+modelClass: NielsVanDenDries\Message\Models\Messagelist
+form: $/nielsvandendries/message/models/messagelist/fields.yaml
+defaultRedirect: nielsvandendries/message/messagelist
+create:
+    redirect: 'nielsvandendries/message/messagelist/update/:id'
+    redirectClose: nielsvandendries/message/messagelist
+update:
+    redirect: nielsvandendries/message/messagelist
+    redirectClose: nielsvandendries/message/messagelist
+preview: {  }

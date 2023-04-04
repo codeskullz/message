@@ -1,0 +1,25 @@
+fields:
+    recipient:
+        label: Recipient
+        nameFrom: name
+        descriptionFrom: description
+        select: name
+        span: left
+        type: relation
+    sender:
+        label: Sender
+        nameFrom: name
+        descriptionFrom: description
+        select: name
+        span: right
+        readOnly: 1
+        type: relation
+    subject:
+        label: Subject
+        span: full
+        type: text
+    message:
+        label: Message
+        size: small
+        span: full
+        type: textarea
