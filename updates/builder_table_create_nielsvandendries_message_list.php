@@ -15,6 +15,7 @@ class BuilderTableCreateNielsvandendriesMessageList extends Migration
             $table->text('message');
             $table->string('sender_id')->nullable();
             $table->boolean('is_read')->default(false);
+            $table->string('messagelist_id')->nullable();
             $table->timestamp('recipient_id')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
